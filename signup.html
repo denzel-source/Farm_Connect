@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - FarmConnect</title>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Create an Account</h2>
+        <form class="signup-form" action="#" method="POST">
+            <label for="role">Sign up as:</label>
+            <select id="role" name="role" required>
+                <option value="">-- Select Role --</option>
+                <option value="farmer">Farmer</option>
+                <option value="buyer">Buyer</option>
+                <option value="partner">Service Provider</option>
+            </select>
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit" class="btn signup">Sign Up</button>
+        </form>
+        <p class="info-box">After signing up, you’ll be taken to your dashboard.</p>
+
+        <p class="login-redirect">Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script src="site.js"></script>
+</body>
+</html>
