@@ -49,31 +49,53 @@ header {
 
 /* === Buttons === */
 .btn {
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
     border: none;
-    border-radius: 4px;
-    font-weight: bold;
+    border-radius: 6px;
+    background-color: #1a5d1a;
+    color: white;
     cursor: pointer;
-    background-color: #90ee90;
-    color: #024731;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
+    width: fit-content;
+    max-width: 100%;
     text-decoration: none;
 }
 
 .btn:hover {
-    background-color: #76d776;
+    background-color: #154a15;
 }
 
 .btn.login {
-    background: transparent;
-    color: white;
-    border: 1px solid white;
+    background-color: white;
+    color: #1a5d1a;
+    border: 1px solid #1a5d1a;
 }
 
 .btn.login:hover {
-    background-color: white;
-    color: #024731;
+    background-color: #1a5d1a;
+    color: white;
 }
+.btn.signup {
+    background-color: #1a5d1a;
+    color: white;
+    border: 1px solid #1a5d1a;
+}
+
+.btn.signup:hover {
+    background-color: #154a15;
+    color: white;
+}
+/* .btn.explore {
+    background-color: transparent;
+    color: #1a5d1a;
+    border: 1px solid #1a5d1a;
+}
+
+.btn.explore:hover {
+    background-color: #1a5d1a;
+    color: white;
+} */
 
 .explore {
     background-color: #024731;
@@ -244,20 +266,6 @@ header {
     color: #333;
 }
 
-/* Footer */
-footer {
-    background-color: #1a5d1a;
-    color: #fff;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-}
-
-footer .services-icons img {
-    width: 40px;
-    margin: 0 10px;
-}
-
 
 .login {
     background-color: transparent;
@@ -354,7 +362,25 @@ footer .services-icons img {
     font-size: 0.9rem;
 }
 
-.services-icons ul {
+.services-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0;
+}
+@media (max-width: 768px) {
+    .services-icons {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .services-icons li {
+      justify-content: center;
+      margin: 0.5rem 0;
+    }
+  }
+  .services-icons ul {
     list-style-type: none;
     padding: 0;
     margin: 1.5rem 0;
@@ -370,36 +396,16 @@ footer .services-icons img {
     color: #fff;
 }
 
-.services-icons i {
-    margin-right: 8px;
-    font-size: 1.5rem;
-}
-
 footer {
-    overflow-x: hidden; /* Prevents sideways scroll */
-    flex-wrap: wrap;    /* Allows wrapping if needed */
-}
-
-.services-icons {
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
     background-color: #1a5d1a;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s ease;
-    width: fit-content;
-    max-width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    overflow-x: hidden;
 }
 
-.btn:hover {
-    background-color: #154a15;
-}
+
 
 
 /* === Marketplace Basket Section === */
@@ -450,4 +456,52 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+/* === Checkout Table Styling === */
+.checkout-section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #fefefe;
+    border-radius: 10px;
+}
+
+.checkout-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.checkout-table th,
+.checkout-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.checkout-table th {
+    background-color: #1a5d1a;
+    color: #fff;
+}
+
+.checkout-table tr:last-child td {
+    border-bottom: none;
+}
+
+.checkout-total {
+    text-align: right;
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1a5d1a;
+}
+
+.checkout-action {
+    margin-top: 2rem;
+    text-align: center;
 }

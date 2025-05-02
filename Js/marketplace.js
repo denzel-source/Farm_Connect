@@ -62,6 +62,8 @@ const inventory = {
   
       renderMarketplace();
       renderBasket();
+      localStorage.setItem("basket", JSON.stringify(basket));
+
     } else {
       alert("Out of stock!");
     }
@@ -73,6 +75,8 @@ const inventory = {
       basket[key].quantity += 1;
       renderMarketplace();
       renderBasket();
+      localStorage.setItem("basket", JSON.stringify(basket));
+
     } else {
       alert("No more stock!");
     }
@@ -88,6 +92,8 @@ const inventory = {
     }
     renderMarketplace();
     renderBasket();
+    localStorage.setItem("basket", JSON.stringify(basket));
+
   }
   
   function removeItem(key) {
@@ -100,5 +106,7 @@ const inventory = {
   window.onload = () => {
     renderMarketplace();
     renderBasket();
+    localStorage.setItem("basket", JSON.stringify(basket));
+
   };
-  localStorage.setItem("basket", JSON.stringify(basket));
+  
