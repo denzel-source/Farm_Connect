@@ -1,78 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marketplace - FarmConnect</title>
-    <link rel="stylesheet" href="css/site.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FarmConnect Marketplace</title>
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script defer src="js/marketplace.js"></script>
 </head>
 <body>
-    <header class="products-header">
-        <h1 class="logo">FarmConnect</h1>
-        <nav class="product-nav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Dashboard.html">Dashboard</a></li>
-                <li><a href="login.html" class="btn login">Logout</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="product-listing">
-        <h2>Available Products</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <h3>Spinach</h3>
-                <p>Price: KES 15/bunch</p>
-                <p>Available: 200 bunches</p>
-                <button class="btn" onclick="goToCheckout('Spinach')">Add to Basket</button>
-            </div>
-            <div class="product-card">
-                <h3>Milk</h3>
-                <p>Price: KES 50/litre</p>
-                <p>Available: 100 litres</p>
-                <button class="btn" onclick="goToCheckout('Milk')">Add to Basket</button>
-            </div>
-            <div class="product-card">
-                <h3>Maize</h3>
-                <p>Price: KES 40/kg</p>
-                <p>Available: 1000 kg</p>
-                <button class="btn" onclick="goToCheckout('Maize')">Add to Basket</button>
-            </div>
-        </div>
+  <header>
+    <h1>Marketplace</h1>
+    <nav class="product-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Dashboard.html">Dashboard</a></li>
+        <li><a href="login.html" class="btn login">Logout</a></li>
+      </ul>
+      <!-- <a href="index.html">Home</a>
+      <a href="Dashboard.html">Dashboard</a> -->
+    </nav>
+  </header>
 
-        <section class="info-box">
-            <p>This is a demo marketplace. Clicking 'Add to Basket' will simulate moving to the checkout page.</p>
-        </section>
-    </main>
-    <!-- <footer>
-        <p>Contact Us: info@farmconnectafrica.com | +254 712 345 678</p>
-        <div class="services-icons">
-          <img src="images/marketplace.png" alt="Marketplace">
-          <img src="images/logistics.png" alt="Logistics">
-          <img src="images/advisory.png" alt="Advisory Services">
-        </div>
-        <p>© 2025 FarmConnect Africa. All Rights Reserved.</p>
-      </footer> -->
-      <footer>
-        <div class="footer-content">
-          <p>Contact Us: info@farmconnectafrica.com | +254 712 345 678</p>
+  <main class="marketplace-section">
+    <section id="marketplace">
+      <h2>Available Products</h2>
+      <div class="product-grid" id="productList">
+        <!-- JS will inject product cards here -->
+      </div>
+    </section>
+
+    <section id="basket">
+      <h2>Your Basket</h2>
+      <div class="basket-grid" id="basketList">
+        <!-- JS will inject basket items here -->
+      </div>
+      <div style="text-align: center; margin-top: 1.5rem;">
+        <a href="checkout.html" class="btn">Proceed to Checkout</a>
+      </div>
       
-          <div class="services-icons">
-            <ul class="list-unstyled">
-              <li><i class="fas fa-shopping-cart me-2 cBlue"></i><span>Marketplace</span></li>
-              <li><i class="fas fa-truck me-2 cBlue"></i><span>Logistics</span></li>
-              <li><i class="fas fa-handshake me-2 cBlue"></i><span>Advisory Services</span></li>
-            </ul>
-          </div>
-      
-          <p>© 2025 FarmConnect Africa. All Rights Reserved.</p>
-        </div>
-      </footer>
-      
-      
-    <script src="Js/site.js"></script>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Contact Us: info@farmconnectafrica.com | +254 712 345 678</p>
+      <div class="services-icons">
+        <ul class="list-unstyled">
+          <li><i class="fas fa-shopping-cart me-2 cBlue"></i><span>Marketplace</span></li>
+          <li><i class="fas fa-truck me-2 cBlue"></i><span>Logistics</span></li>
+          <li><i class="fas fa-handshake me-2 cBlue"></i><span>Advisory Services</span></li>
+        </ul>
+      </div>
+      <p>© 2025 FarmConnect Africa. All Rights Reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
