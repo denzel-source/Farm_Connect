@@ -1,8 +1,8 @@
 // Initial inventory
 const inventory = {
-    spinach: { name: "Spinach", available: 10, price: 15 },
-    maize: { name: "Maize", available: 20, price: 40 },
-    milk: { name: "Milk", available: 8, price: 30 }
+    spinach: { name: "Spinach", available: 10, price: 15 ,image: 'images/spinach.jpg'},
+    maize: { name: "Maize", available: 20, price: 40 ,image: 'images/maize.jpg'},
+    milk: { name: "Milk", available: 8, price: 30, image: 'images/milk.jpg'},
   };
   
   const basket = {};
@@ -19,6 +19,7 @@ const inventory = {
       card.className = "product-card";
   
       card.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="product-image">
         <h3>${product.name}</h3>
         <p>Price: KES ${product.price}</p>
         <p>Available: ${product.available}</p>
